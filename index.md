@@ -136,3 +136,74 @@ Age_Estimation_3D_Dental/
 ```bash
 pip install -r requirements.txt
 ```
+
+Usage
+Step 1: Place STL files (Training)
+
+Copy all labeled STL files into:
+```data/raw/
+```
+
+Step 2: Build Dataset
+```
+python src/dataset_builder.py
+```
+
+Output:
+```
+data/processed/dataset.csv
+```
+
+Step 3: Train Models
+```
+python src/train_model.py
+```
+Outputs:
+```
+models/age_model.pkl
+models/sex_model.pkl
+```
+
+Step 4: Predict from New STL (Inference)
+
+Provide an unlabeled STL file and run:
+```
+python src/predict.py
+```
+
+Example output:
+```
+Predicted Age (years): 36.4
+Predicted Sex: Male
+```
+
+Expected Performance (Proof-of-Concept)
+
+Given the limited dataset size:
+
+= Sex classification accuracy: ~75–85%
+
+= Age estimation error: ±5–8 years (MAE)
+
+= These results are intended for academic demonstration, not clinical deployment.
+
+Ethical & Forensic Considerations
+
+- No personal identifiers are stored in the repository
+
+- Raw dental STL files are excluded from version control
+
+- The system avoids manual annotation bias
+
+- The methodology emphasizes reproducibility and transparency
+
+
+Limitations & Future Work
+
+- Increase dataset size for improved accuracy
+
+- Incorporate curvature-based and wear-specific features
+
+- Extend to deep learning (e.g., PointNet) with larger datasets
+
+- Separate models for upper and lower jaws
