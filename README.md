@@ -192,17 +192,21 @@ Predicted Age (years): 36.4
 Predicted Sex: Male
 ```
 
-Expected Performance (Proof-of-Concept)
+---
+
+## Expected Performance (Proof-of-Concept)
 
 Given the limited dataset size:
 
-= Sex classification accuracy: ~75–85%
+* Sex classification accuracy: ~75–85%
 
-= Age estimation error: ±5–8 years (MAE)
+* Age estimation error: ±5–8 years (MAE)
 
-= These results are intended for academic demonstration, not clinical deployment.
+* These results are intended for academic demonstration, not clinical deployment.
 
-Ethical & Forensic Considerations
+--
+
+## Ethical & Forensic Considerations
 
 - No personal identifiers are stored in the repository
 
@@ -212,8 +216,9 @@ Ethical & Forensic Considerations
 
 - The methodology emphasizes reproducibility and transparency
 
+--
 
-Limitations & Future Work
+## Limitations & Future Work
 
 - Increase dataset size for improved accuracy
 
