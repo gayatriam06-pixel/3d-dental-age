@@ -148,18 +148,20 @@ Age_Estimation_3D_Dental/
 
 ### Install Dependencies
 
-```bash
+```
 pip install -r requirements.txt
 ```
 
-Usage
-Step 1: Place STL files (Training)
+## Usage
+### Step 1: Place STL files (Training)
 
 Copy all labeled STL files into:
-```data/raw/
+
+```
+data/raw/
 ```
 
-Step 2: Build Dataset
+### Step 2: Build Dataset
 ```
 python src/dataset_builder.py
 ```
@@ -169,17 +171,18 @@ Output:
 data/processed/dataset.csv
 ```
 
-Step 3: Train Models
+### Step 3: Train Models
 ```
 python src/train_model.py
 ```
+
 Outputs:
 ```
 models/age_model.pkl
 models/sex_model.pkl
 ```
 
-Step 4: Predict from New STL (Inference)
+### Step 4: Predict from New STL (Inference)
 
 Provide an unlabeled STL file and run:
 ```
@@ -204,26 +207,26 @@ Given the limited dataset size:
 
 * These results are intended for academic demonstration, not clinical deployment.
 
---
+---
 
 ## Ethical & Forensic Considerations
 
-- No personal identifiers are stored in the repository
+* No personal identifiers are stored in the repository
 
-- Raw dental STL files are excluded from version control
+* Raw dental STL files are excluded from version control
 
-- The system avoids manual annotation bias
+* The system avoids manual annotation bias
 
-- The methodology emphasizes reproducibility and transparency
+* The methodology emphasizes reproducibility and transparency
 
---
+---
 
 ## Limitations & Future Work
 
-- Increase dataset size for improved accuracy
+* Increase dataset size for improved accuracy
 
-- Incorporate curvature-based and wear-specific features
+* Incorporate curvature-based and wear-specific features
 
-- Extend to deep learning (e.g., PointNet) with larger datasets
+* Extend to deep learning (e.g., PointNet) with larger datasets
 
-- Separate models for upper and lower jaws
+* Separate models for upper and lower jaws
